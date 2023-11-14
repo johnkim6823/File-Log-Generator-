@@ -1,0 +1,62 @@
+{
+    "R&D": [
+        {
+            "name": "R&D_Employee_1",
+            "grade": 1
+        },
+        {
+            "name": "R&D_Employee_2",
+            "grade": 2
+        },
+        {
+            "name": "R&D_Employee_3",
+            "grade": 2
+        }
+    ],
+    "HRD": [
+        {
+            "name": "HRD_Employee_1",
+            "grade": 1
+        },
+        {
+            "name": "HRD_Employee_2",
+            "grade": 2
+        },
+        {
+            "name": "HRD_Employee_3",
+            "grade": 2
+        },
+        {
+            "name": "HRD_Employee_4",
+            "grade": 2
+        },
+        {
+            "name": "HRD_Employee_5",
+            "grade": 2
+        }
+    ],
+    "Marketing": [
+        {
+            "name": "Marketing_Employee_1",
+            "grade": 1
+        },
+        {
+            "name": "Marketing_Employee_2",
+            "grade": 2
+        },
+        {
+            "name": "Marketing_Employee_3",
+            "grade": 2
+        },
+        {
+            "name": "Marketing_Employee_4",
+            "grade": 2
+        }
+    ],
+    "Finance": [
+        {
+            "name": "Finance_Employee_1",
+            "grade": 1
+        }
+    ]
+}
