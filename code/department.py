@@ -5,7 +5,7 @@ class Department:
         self.name = name
         self.employees = []                                                 # 부서 내 직원 객체 리스트
         self.event_flag = False
-        self.regular_behavior_patterns = StandardBehavior()
+        self.regular_behavior_patterns = behavior
         self.event_behavior_patterns = {}                                   # 부서 이벤트 시의 행동 패턴
 
     def manage_event(self, event_type, is_active):
@@ -30,7 +30,6 @@ class Department:
     # 부가적인 함수
     def display_behaviors(self):
         print(f"Behaviors for {self.name} Department:")
-        regular_behavior_patterns = self.regular_behavior_patterns.get_behaivors()
-        for behavior_name, behavior_func in regular_behavior_patterns.items():
+        for behavior_name, behavior_func in self.regular_behavior_patterns.get_behaviors().items():
             print(f'{behavior_name}')
         print("--------------------------------------")

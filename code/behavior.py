@@ -1,12 +1,5 @@
 class StandardBehavior:
     def __init__(self, file=None):
-        self.behaviors = {
-            "create_file": self.create_file,
-            "read_file": self.read_file,
-            "execute_file": self.execute_file,
-            "delete_file": self.delete_file
-        }
-
         self.file = file
 
     @staticmethod

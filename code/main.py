@@ -54,7 +54,7 @@ def print_departments_and_employees(department_class_list):
 #======= 객체들 출력 by employees_class_list =======#
 def print_employee_details(employees_class_list):
     print("==============================")    
-    print("3.2 Check data by Department")
+    print("3.2 Check data by Employee")
     print("==============================") 
     for employee in employees_class_list:
         print(f"Name: {employee.name}, Department: {employee.department}, Rank: {employee.rank}")
@@ -70,7 +70,7 @@ def print_department_behavior(department_class_list):
 #======= Employee별 행동들 =======#
 def print_employee_behavior(employees_class_list):
     print("==============================")    
-    print("4.2 Check Departments behavior")
+    print("4.2 Check Employees behavior")
     print("==============================") 
     for employee in employees_class_list:
         employee.display_behaviors()
@@ -98,11 +98,11 @@ def main():
     print_departments_and_employees(department_class_list)  # 각 부서별 직원 수와 이름 출력
     print_employee_details(employees_class_list )           # 직원별 상세 정보 출력
     # # 행동 출력 
-    # print_department_behavior(department_class_list)
-    # print_employee_behavior(employees_class_list)
+    print_department_behavior(department_class_list)
+    print_employee_behavior(employees_class_list)
     #------------------------------------------------------------------------------------
-
-    employee_class_list[0].perform_behavior()
+    
+    simulating(employee_class_list)
 
 if __name__ == "__main__":
     main()

@@ -25,11 +25,10 @@ class Employee:
         return random.choice([True, False])
 
     def perform_behavior(self):
-        if self.behavior_pattern and self.decide_participation(): 
-        #     behavior_name = random.choice(list(self.behavior_pattern.behaviors.keys()))
-        #     result = self.behavior_pattern.behaviors[behavior_name]()
-        #     result
-            pass
+        if self.decide_participation(): 
+            behaviors = self.behavior_pattern.get_behaviors()
+            behavior_name = random.choice(list(behaviors.keys()))
+            #####print(f'{behavior_name}')
 
         else:
             print(f'{self.name} is Not a participant.')
@@ -48,6 +47,6 @@ class Employee:
 
     def display_behaviors(self):
         print(f"Behaviors for {self.name} :")
-        for behavior_name, behavior_func in self.behavior_pattern.items():
+        for behavior_name, behavior_func in self.behavior_pattern.get_behaviors().items():
             print(f'{behavior_name}')
         print("--------------------------------------")
