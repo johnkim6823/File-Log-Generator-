@@ -1,33 +1,63 @@
-class Behavior:
+class StandardBehavior:
+    def __init__(self, file=None):
+        self.behaviors = {
+            "create_file": self.create_file,
+            "read_file": self.read_file,
+            "execute_file": self.execute_file,
+            "delete_file": self.delete_file
+        }
 
-    def create_file(self, employee, file):
-        print("file created.")
+        self.file = file
 
-    def read_file(self, employee, file):
-        print("file read")
+    @staticmethod
+    def create_file(self):
+        print("created")
 
+    @staticmethod
+    def read_file(self):
+        print("Read")
 
-    def write_file(self, employee, file):
-        print("file write.")
+    @staticmethod
+    def execute_file(self):
+        print("executed")
 
-    def execute_file(self, employee, file):
-        print("file execute.")
-    
-    def register_file(self, employee, file):
-        print("file egister.")
-
-
-    def send_file(self, employee, file):
-        print("file send.")
-
-    def request_file(self, employee, file):
-        print("file request.")
-
-    def request_file_accept(self, employee, file):
-        print("file request accepted.")
-
-    def request_file_refuse(self, employee, file):
-        print("file request refused.")
-
+    @staticmethod   
+    def delete_file(self):
+        print("Deleted")
         
+    @staticmethod
+    def get_behaviors():
+        return {
+            'create_file': StandardBehavior.create_file,
+            'read_file': StandardBehavior.read_file,
+            'execute_file': StandardBehavior.execute_file,
+            'Delete_file': StandardBehavior.delete_file
+        }
+    # 기타 행동 메소드...
 
+class DepartmentEventBehavior:
+    def __init__(self, file=None):
+        self.employee = employee
+        self.file = file
+
+    def special_event_action(self):
+        # 특별 이벤트에 맞는 행동 로직
+        pass
+
+    # 기타 특별 이벤트 행동 메소드...
+
+
+class MaliciousBehavior:
+    def __init__(self, file=None):
+        self.employee = employee
+        self.file = file
+
+    def malicious_action1(self):
+        # 악의적인 행동 1 로직
+        pass
+
+    def malicious_action2(self):
+        # 악의적인 행동 2 로직
+        pass
+
+    # 기타 악의적인 행동 메소드...
