@@ -24,7 +24,7 @@ class StandardBehavior:
             'create_file': StandardBehavior.create_file,
             'read_file': StandardBehavior.read_file,
             'execute_file': StandardBehavior.execute_file,
-            'Delete_file': StandardBehavior.delete_file
+            'delete_file': StandardBehavior.delete_file
         }
     # 기타 행동 메소드...
 
