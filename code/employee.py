@@ -29,7 +29,9 @@ class Employee:
             behaviors = self.behavior_pattern.get_behaviors()
             behavior_name = random.choice(list(behaviors.keys()))
             method = getattr(self.behavior_pattern, behavior_name)
-            method
+            print(f'{self.name}')
+            method()
+
 
         else:
             print(f'{self.name} is Not a participant.')

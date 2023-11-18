@@ -1,26 +1,30 @@
+# py
 from employee import Employee
 from department import Department
 from file import File
 from behavior import StandardBehavior
 
-#LIB
+# LIB
 import json
 
+# Class_list
 department_class_list = []
 employees_class_list = [] 
 file_clss_list = []
 
+#
+
 #======= JSON FILE READ =======#
 def read_json_file(file_path):
     print("==============================")    
-    print("0. Get data from JSON file.")
+    print("0. Get data from JSON file")
     with open(file_path, 'r') as file:
         return json.load(file)
 
 #======= Department 클래스 객체 생성 =======#
 def create_departments(data, behavior):
     print("==============================")    
-    print("1. Make Department 객체.")
+    print("1. Make Department 객체")
     department_class_list = []
     for dept_name in data.keys():
         department = Department(dept_name,behavior)
@@ -30,7 +34,7 @@ def create_departments(data, behavior):
 #======= Employee 클래스 객체 생성 =======#
 def create_employees(department_class_list, data):
     print("==============================")    
-    print("2. Make Employee 객체.")
+    print("2. Make Employee 객체")
     employees = []
     for department in department_class_list:
         if department.name in data:
@@ -77,8 +81,15 @@ def print_employee_behavior(employees_class_list):
 
 #======= Simulating =======#
 def simulating(employees_class_list):
-    for employee in employees_class_list:
-        employee.perform_behavior()
+    print("==============================")    
+    print("5. Simulating")
+    print("==============================")
+    for step in range(1,10):
+        print(f'Step: {step}-----------------')
+        for employee in employees_class_list:
+            employee.perform_behavior()
+            print("------------------------------")
+
 
 def main():
     # JSON 파일 읽기
